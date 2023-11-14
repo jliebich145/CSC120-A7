@@ -77,10 +77,7 @@ public class Library extends Building {
    * @return true if in collection, false if not
    */
   public boolean containsTitle(String title){
-    if(this.collection.containsKey(title)){
-      return true;
-    }
-    return false;
+    return this.collection.containsKey(title);
   }
 
   /**
@@ -92,10 +89,7 @@ public class Library extends Building {
     if(this.containsTitle(title) == false){
       throw new RuntimeException("This book is not part of this collection");
     }
-    if(this.collection.get(title) == true){
-      return true;
-    }
-    else{return false;}
+    return this.collection.get(title);
   }
 /**
  * Prints out the library's collection, including availability
